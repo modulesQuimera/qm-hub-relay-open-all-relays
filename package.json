@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-relay-open-all-relays",
+  "version": "1.0.0",
+  "description": "relay open all relays  module - Node-Red",
+  "main": "all_relays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-relay-open-all-relays.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-relay-open-all-relays/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-relay-open-all-relays#readme",
+  "node-red": {
+    "nodes": {
+      "modulo": "all_relays.js"
+    }
+  }
+}
