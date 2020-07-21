@@ -1,6 +1,6 @@
 {
   "name": "qm-relay-open-all-relays",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "relay open all relays  module - Node-Red",
   "main": "all_relays.js",
   "scripts": {

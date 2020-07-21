@@ -1,8 +1,12 @@
 <script type="text/javascript">
     RED.nodes.registerType('all_relays', {
         category: 'relay',
-        color: '#F3B567',
+        color: '#808080',
         defaults: {
+            name:{
+                value: ""
+            },
+            slot:{value:"", required:true},
             // coloque as variaveis abaixo
             /*
             NomeDaVariavel:{
@@ -12,23 +16,69 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "./icons/Open_All_Relays.svg",
-        label: "Open all relays",
+        icon: "Relay.svg",
+        label: function() { return this.name? "Open all relays - " + this.name : "Open all Relays"},
         paletteLabel: "Open all relays",
     });
 </script>
 
+
+<style>
+
+    label{
+        width: 50% !important;
+        margin-bottom: 2px !important;
+    }
+
+    .columm{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    hr {
+    width: 40% !important;
+    float: left !important;
+    }
+
+    .hr-div-all-relay{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 450px !important;
+    }
+
+    .optional{
+        height: max-content !important;
+        margin-top: 10px !important;
+    }
+
+    .descript{
+        text-align: center;
+    }
+
+</style>
+
 <script type="text/html" data-template-name="all_relays">
-    <!-- incio do serial -->
 
-    <!-- fim do serial -->
-
-    <!-- ponha os elementos graficos HTML entre os espacos -->
-    <!-- Inicio HTML -->
-
-    <!-- Fim HTML -->
+    <div class="form-row columm">
+        <strong class="descript">
+            This Component is used to Open all relay.
+        </strong>
+    </div>
+     <div class="form-row columm">
+        <label  for="node-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-input-slot" style="width:20%;">
+    </div>
+    <div class="hr-div-all-relay">
+        <hr>
+        <span class="optional">Optional</span>
+        <hr>
+    </div>
+    <div class="form-row columm">
+        <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Component Nickname</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
 </script>
 
 <script type="text/html" data-help-name="all_relays">
-    <p>teste relay</p>
+    <p>Make all relays default state</p>
 </script>
